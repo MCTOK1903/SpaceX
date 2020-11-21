@@ -63,7 +63,7 @@ class LaunchListViewController: UIViewController {
             launchListCollection.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             launchListCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             launchListCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            launchListCollection.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            launchListCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .done, target: self, action: #selector(sort))

@@ -47,7 +47,7 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.numberOfLines = 0
         label.backgroundColor = .white
         return label
@@ -58,7 +58,7 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.numberOfLines = 0
         label.backgroundColor = .white
         return label
@@ -69,7 +69,7 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 8)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.numberOfLines = 0
         label.backgroundColor = .white
         return label
@@ -98,7 +98,7 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
     
     func setUpUI() {
         NSLayoutConstraint.activate([
-            horizontalStack.topAnchor.constraint(equalTo: contentView.topAnchor),
+            horizontalStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             horizontalStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             horizontalStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             horizontalStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
@@ -109,7 +109,7 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
 //            launchImage.widthAnchor.constraint(equalToConstant: contentView.frame.width / 2),
             
             verticalStack.topAnchor.constraint(equalTo: horizontalStack.topAnchor),
-            verticalStack.trailingAnchor.constraint(equalTo: horizontalStack.trailingAnchor),
+            verticalStack.trailingAnchor.constraint(equalTo: horizontalStack.trailingAnchor, constant: 16),
             verticalStack.bottomAnchor.constraint(equalTo: horizontalStack.bottomAnchor),
             
             launchMissionNameLabel.topAnchor.constraint(equalTo: verticalStack.topAnchor),
