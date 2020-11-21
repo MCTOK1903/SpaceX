@@ -12,7 +12,7 @@ class SpaceXTests: XCTestCase {
 
     func testParsing() throws {
         let bundle = Bundle(for: SpaceXTests.self)
-        let url = bundle.url(forResource: "Launch", withExtension: ".json")!
+        let url = bundle.url(forResource: "launch", withExtension: ".json")!
         let data = try Data(contentsOf: url)
         let decoder = Decoder.launchDecoder
         let launch = try decoder.decode([Launch].self, from: data)
