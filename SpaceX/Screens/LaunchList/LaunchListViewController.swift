@@ -21,6 +21,7 @@ class LaunchListViewController: UIViewController {
     var launchCellViewModel: LaunchListCellViewModelType!
     
     private var launchList: [LaunchPresentation] = []
+    private var sortedLaunchList: [LaunchPresentation] = []
     
     // MARK: View
     
@@ -47,6 +48,8 @@ class LaunchListViewController: UIViewController {
         
         viewModel.load()
         
+
+        
         setUpUI()
     }
     
@@ -62,6 +65,41 @@ class LaunchListViewController: UIViewController {
             launchListCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             launchListCollection.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .done, target: self, action: #selector(sort))
+    }
+    
+    @objc func sort() {
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let sortDesc = UIAlertAction(title: "Sort By Descending", style: .default, handler: { [weak self] _  in
+            guard let self = self else { return }
+            
+            let sorted = self.launchList.sorted { (first, second) -> Bool in
+                first.launchYear > second.launchYear
+            }
+            self.sortedLaunchList = sorted
+            self.launchListCollection.reloadData()
+        })
+        
+        let sortAsc =  UIAlertAction(title: "Sort By Ascending", style: .default, handler: { [weak self] _  in
+            guard let self = self else { return }
+            
+            let sorted = self.launchList.sorted { (first, second) -> Bool in
+                first.launchYear < second.launchYear
+            }
+            self.sortedLaunchList = sorted
+            self.launchListCollection.reloadData()
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(sortDesc)
+        actionSheet.addAction(sortAsc)
+        actionSheet.addAction(cancel)
+        
+        present(actionSheet, animated: true)
     }
 }
 
@@ -74,6 +112,7 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .showLaunchList(let launchList):
             self.launchList = launchList
+            sortedLaunchList = self.launchList
             launchListCollection.reloadData()
         }
     }
@@ -82,12 +121,12 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
 // MARK: - UICollectionViewDataSource
 extension LaunchListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return launchList.count
+        return sortedLaunchList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchListCollectionViewCell().identifier, for: indexPath) as! LaunchListCollectionViewCell
-        launchCellViewModel = LaunchListCellViewModel(launch: launchList[indexPath.item])
+        launchCellViewModel = LaunchListCellViewModel(launch: sortedLaunchList[indexPath.item])
         cell.launchImage.sd_setImage(with: launchCellViewModel.imageLink)
         cell.launchMissionNameLabel.text = launchCellViewModel.missionName
         cell.rocketNameLabel.text = launchCellViewModel.rocketName
@@ -112,7 +151,7 @@ extension LaunchListViewController: UICollectionViewDelegateFlowLayout {
         let spaceBetweenCells = flowLayout.minimumInteritemSpacing * (colums - 1)
         let adjustedWith = collectioViewWith - spaceBetweenCells
         let width: CGFloat = floor(adjustedWith / colums)
-        let height = view.frame.height/3
+        let height = view.frame.height/4
         return CGSize(width: width, height: height)
     }
 }
