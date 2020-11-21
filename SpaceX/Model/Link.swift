@@ -11,8 +11,8 @@ public struct Link: Codable {
     
     public let missionImage: String
     public let missionImageSmall: String
-    public let articleLink: String
-    public let wikipediaLink: String
+    public let articleLink: String?
+    public let wikipediaLink: String?
     public let videoLink: String
     
     public enum CodingKeys: String, CodingKey {

@@ -14,7 +14,7 @@ public struct Launch: Codable {
     public let launchYear: String
     public let rocket: Rocket
     public let links: Link
-    public let details: String
+    public let details: String? 
     
     public enum CodingKeys: String, CodingKey {
         case flightNumber = "flight_number"
