@@ -11,5 +11,5 @@ protocol LaunchListCellViewModelType {
     var missionName: String { get }
     var launchYear: String { get }
     var rocketName: String { get }
-    var imageLink: String { get }
+    var imageLink: URL { get }
 }

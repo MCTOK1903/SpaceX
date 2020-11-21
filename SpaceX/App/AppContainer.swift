@@ -10,5 +10,5 @@ import Foundation
 let app = AppContainer()
 
 class AppContainer {
-    let servvice = LaunchService()
+    let service = LaunchService()
 }

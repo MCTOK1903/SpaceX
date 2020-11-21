@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LaunchListViewController: UIViewController {
     
     // MARK: Properties
     
-    var viewModel: LaunchListViewModelType!
+    var viewModel: LaunchListViewModelType! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
+    
+    var launchCellViewModel: LaunchListCellViewModelType!
     
     private var launchList: [LaunchPresentation] = []
     
@@ -23,6 +30,7 @@ class LaunchListViewController: UIViewController {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.backgroundColor = .white
+        cv.register(LaunchListCollectionViewCell.self, forCellWithReuseIdentifier: LaunchListCollectionViewCell().identifier)
         cv.showsVerticalScrollIndicator = false
         return cv
     }()
@@ -32,7 +40,12 @@ class LaunchListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        launchListCollection.delegate = self
+        launchListCollection.dataSource = self
+        
         view.addSubview(launchListCollection)
+        
+        viewModel.load()
         
         setUpUI()
     }
@@ -73,7 +86,13 @@ extension LaunchListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchListCollectionViewCell().identifier, for: indexPath) as! LaunchListCollectionViewCell
+        launchCellViewModel = LaunchListCellViewModel(launch: launchList[indexPath.item])
+        cell.launchImage.sd_setImage(with: launchCellViewModel.imageLink)
+        cell.launchMissionNameLabel.text = launchCellViewModel.missionName
+        cell.rocketNameLabel.text = launchCellViewModel.rocketName
+        cell.launchYearLabel.text = launchCellViewModel.launchYear
+        return cell
     }
 }
 
@@ -81,5 +100,19 @@ extension LaunchListViewController: UICollectionViewDataSource {
 extension LaunchListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //Todo
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension LaunchListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let colums: CGFloat = 1
+        let collectioViewWith = collectionView.bounds.width
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let spaceBetweenCells = flowLayout.minimumInteritemSpacing * (colums - 1)
+        let adjustedWith = collectioViewWith - spaceBetweenCells
+        let width: CGFloat = floor(adjustedWith / colums)
+        let height = view.frame.height/3
+        return CGSize(width: width, height: height)
     }
 }
