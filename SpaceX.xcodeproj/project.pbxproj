@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00A496842569203800940166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A496832569203800940166 /* AppDelegate.swift */; };
 		00A496862569203800940166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A496852569203800940166 /* SceneDelegate.swift */; };
-		00A496882569203800940166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A496872569203800940166 /* ViewController.swift */; };
 		00A4968D2569203A00940166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A4968C2569203A00940166 /* Assets.xcassets */; };
 		00A496902569203A00940166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A4968E2569203A00940166 /* LaunchScreen.storyboard */; };
 		00F441D0256929A700A641A5 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CD256929A700A641A5 /* Launch.swift */; };
@@ -22,6 +21,10 @@
 		00F441EB25692D2E00A641A5 /* NetworkContant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441EA25692D2E00A641A5 /* NetworkContant.swift */; };
 		00F4421E256939D200A641A5 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4421D256939D200A641A5 /* SpaceXTests.swift */; };
 		00F4422925693A0000A641A5 /* Launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F4422825693A0000A641A5 /* Launch.json */; };
+		00F4422F25693DD600A641A5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4422E25693DD600A641A5 /* AppContainer.swift */; };
+		00F4423625693E3700A641A5 /* LaunchListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */; };
+		00F4423A25693F2700A641A5 /* LaunchPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423925693F2700A641A5 /* LaunchPresentation.swift */; };
+		00F4423E2569405800A641A5 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423D2569405800A641A5 /* LaunchListViewModel.swift */; };
 		BBBD93B585857EF3AF10345D /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +42,6 @@
 		00A496802569203800940166 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A496832569203800940166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00A496852569203800940166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00A496872569203800940166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00A4968C2569203A00940166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00A4968F2569203A00940166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00A496912569203A00940166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		00F4421D256939D200A641A5 /* SpaceXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXTests.swift; sourceTree = "<group>"; };
 		00F4421F256939D200A641A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F4422825693A0000A641A5 /* Launch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Launch.json; sourceTree = "<group>"; };
+		00F4422E25693DD600A641A5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModelType.swift; sourceTree = "<group>"; };
+		00F4423925693F2700A641A5 /* LaunchPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresentation.swift; sourceTree = "<group>"; };
+		00F4423D2569405800A641A5 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		2A1EE4CDB23D29268BDC4C54 /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
 		5E0A4E0EB5825FB07BB39018 /* Pods-SpaceX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.release.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.release.xcconfig"; sourceTree = "<group>"; };
 		8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,13 +108,12 @@
 		00A496822569203800940166 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				00F441C02569290200A641A5 /* App */,
 				00F441E525692CF500A641A5 /* Constants */,
-				00F441C42569291D00A641A5 /* Resources */,
 				00F441C32569291300A641A5 /* Model */,
+				00F441C42569291D00A641A5 /* Resources */,
 				00F441C22569290E00A641A5 /* Screens */,
 				00F441C12569290800A641A5 /* Services */,
-				00F441C02569290200A641A5 /* App */,
-				00A496872569203800940166 /* ViewController.swift */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 		00F441C02569290200A641A5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				00F4422E25693DD600A641A5 /* AppContainer.swift */,
 				00A496832569203800940166 /* AppDelegate.swift */,
 				00A496852569203800940166 /* SceneDelegate.swift */,
 				00A496912569203A00940166 /* Info.plist */,
@@ -135,6 +141,7 @@
 		00F441C22569290E00A641A5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				00F4423425693E1900A641A5 /* LaunchList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -200,6 +207,16 @@
 				00F4422825693A0000A641A5 /* Launch.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		00F4423425693E1900A641A5 /* LaunchList */ = {
+			isa = PBXGroup;
+			children = (
+				00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */,
+				00F4423925693F2700A641A5 /* LaunchPresentation.swift */,
+				00F4423D2569405800A641A5 /* LaunchListViewModel.swift */,
+			);
+			path = LaunchList;
 			sourceTree = "<group>";
 		};
 		2032296F41B2A59613058D3D /* Frameworks */ = {
@@ -363,13 +380,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A496882569203800940166 /* ViewController.swift in Sources */,
+				00F4423A25693F2700A641A5 /* LaunchPresentation.swift in Sources */,
 				00A496842569203800940166 /* AppDelegate.swift in Sources */,
 				00F441DA25692A7D00A641A5 /* Decoders.swift in Sources */,
 				00F441D0256929A700A641A5 /* Launch.swift in Sources */,
 				00F441D2256929A700A641A5 /* Link.swift in Sources */,
+				00F4422F25693DD600A641A5 /* AppContainer.swift in Sources */,
+				00F4423625693E3700A641A5 /* LaunchListViewModelType.swift in Sources */,
 				00F441E825692D1000A641A5 /* Constants.swift in Sources */,
 				00F441D625692A3900A641A5 /* Result.swift in Sources */,
+				00F4423E2569405800A641A5 /* LaunchListViewModel.swift in Sources */,
 				00F441D1256929A700A641A5 /* Rocket.swift in Sources */,
 				00F441EB25692D2E00A641A5 /* NetworkContant.swift in Sources */,
 				00A496862569203800940166 /* SceneDelegate.swift in Sources */,
