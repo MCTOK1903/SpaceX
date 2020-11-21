@@ -29,6 +29,10 @@
 		00F4424D25694C9500A641A5 /* MockLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4424C25694C9500A641A5 /* MockLaunchService.swift */; };
 		00F4425325694E6400A641A5 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4425225694E6400A641A5 /* MockView.swift */; };
 		00F4425F2569533600A641A5 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4425E2569533600A641A5 /* ResourceLoader.swift */; };
+		00F4426D256967F300A641A5 /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4426C256967F300A641A5 /* LaunchListViewController.swift */; };
+		00F4427525696C6000A641A5 /* LaunchListCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4427425696C6000A641A5 /* LaunchListCellViewModelType.swift */; };
+		00F4427B25696CBF00A641A5 /* LaunchListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4427A25696CBF00A641A5 /* LaunchListCellViewModel.swift */; };
+		00F4428025696D9D00A641A5 /* LaunchListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4427F25696D9D00A641A5 /* LaunchListCollectionViewCell.swift */; };
 		BBBD93B585857EF3AF10345D /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,10 @@
 		00F4424C25694C9500A641A5 /* MockLaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchService.swift; sourceTree = "<group>"; };
 		00F4425225694E6400A641A5 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		00F4425E2569533600A641A5 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
+		00F4426C256967F300A641A5 /* LaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
+		00F4427425696C6000A641A5 /* LaunchListCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListCellViewModelType.swift; sourceTree = "<group>"; };
+		00F4427A25696CBF00A641A5 /* LaunchListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListCellViewModel.swift; sourceTree = "<group>"; };
+		00F4427F25696D9D00A641A5 /* LaunchListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A1EE4CDB23D29268BDC4C54 /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
 		5E0A4E0EB5825FB07BB39018 /* Pods-SpaceX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.release.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.release.xcconfig"; sourceTree = "<group>"; };
 		8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,12 +210,12 @@
 		00F4421C256939D200A641A5 /* SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
-				00F4425D256952FC00A641A5 /* LaunchViewModelTest */,
+				00F4425E2569533600A641A5 /* ResourceLoader.swift */,
+				00F4421F256939D200A641A5 /* Info.plist */,
 				00F4425C256952EC00A641A5 /* ServiceTests */,
+				00F4425D256952FC00A641A5 /* LaunchViewModelTest */,
 				00F4424B25694C7800A641A5 /* Mocks */,
 				00F44227256939E800A641A5 /* Resources */,
-				00F4421F256939D200A641A5 /* Info.plist */,
-				00F4425E2569533600A641A5 /* ResourceLoader.swift */,
 			);
 			path = SpaceXTests;
 			sourceTree = "<group>";
@@ -223,9 +231,11 @@
 		00F4423425693E1900A641A5 /* LaunchList */ = {
 			isa = PBXGroup;
 			children = (
+				00F4427225696C1200A641A5 /* LaunchListCell */,
 				00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */,
 				00F4423925693F2700A641A5 /* LaunchPresentation.swift */,
 				00F4423D2569405800A641A5 /* LaunchListViewModel.swift */,
+				00F4426C256967F300A641A5 /* LaunchListViewController.swift */,
 			);
 			path = LaunchList;
 			sourceTree = "<group>";
@@ -253,6 +263,16 @@
 				00F4424725694C0F00A641A5 /* LaunchViewModelTests.swift */,
 			);
 			path = LaunchViewModelTest;
+			sourceTree = "<group>";
+		};
+		00F4427225696C1200A641A5 /* LaunchListCell */ = {
+			isa = PBXGroup;
+			children = (
+				00F4427425696C6000A641A5 /* LaunchListCellViewModelType.swift */,
+				00F4427A25696CBF00A641A5 /* LaunchListCellViewModel.swift */,
+				00F4427F25696D9D00A641A5 /* LaunchListCollectionViewCell.swift */,
+			);
+			path = LaunchListCell;
 			sourceTree = "<group>";
 		};
 		2032296F41B2A59613058D3D /* Frameworks */ = {
@@ -419,15 +439,19 @@
 				00F4423A25693F2700A641A5 /* LaunchPresentation.swift in Sources */,
 				00A496842569203800940166 /* AppDelegate.swift in Sources */,
 				00F441DA25692A7D00A641A5 /* Decoders.swift in Sources */,
+				00F4427525696C6000A641A5 /* LaunchListCellViewModelType.swift in Sources */,
 				00F441D0256929A700A641A5 /* Launch.swift in Sources */,
 				00F441D2256929A700A641A5 /* Link.swift in Sources */,
+				00F4427B25696CBF00A641A5 /* LaunchListCellViewModel.swift in Sources */,
 				00F4422F25693DD600A641A5 /* AppContainer.swift in Sources */,
 				00F4423625693E3700A641A5 /* LaunchListViewModelType.swift in Sources */,
 				00F441E825692D1000A641A5 /* Constants.swift in Sources */,
+				00F4426D256967F300A641A5 /* LaunchListViewController.swift in Sources */,
 				00F441D625692A3900A641A5 /* Result.swift in Sources */,
 				00F4423E2569405800A641A5 /* LaunchListViewModel.swift in Sources */,
 				00F441D1256929A700A641A5 /* Rocket.swift in Sources */,
 				00F441EB25692D2E00A641A5 /* NetworkContant.swift in Sources */,
+				00F4428025696D9D00A641A5 /* LaunchListCollectionViewCell.swift in Sources */,
 				00A496862569203800940166 /* SceneDelegate.swift in Sources */,
 				00F441DE25692B6F00A641A5 /* LaunchService.swift in Sources */,
 			);
