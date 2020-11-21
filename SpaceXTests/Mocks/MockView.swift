@@ -10,6 +10,10 @@ import Foundation
 
 final class MockView: LaunchListViewModelDelegate {
     
+    func navigate(to route: LaunchListRoute) {
+        
+    }
+    
     var outputs: [LaunchListViewModelOutput] = []
     
     func handleViewModelOutput(_ output: LaunchListViewModelOutput) {

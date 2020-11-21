@@ -11,6 +11,10 @@
 		00A496862569203800940166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A496852569203800940166 /* SceneDelegate.swift */; };
 		00A4968D2569203A00940166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A4968C2569203A00940166 /* Assets.xcassets */; };
 		00A496902569203A00940166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A4968E2569203A00940166 /* LaunchScreen.storyboard */; };
+		00EEA72625699BAA004253F2 /* LaunchDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72525699BAA004253F2 /* LaunchDetailViewModelType.swift */; };
+		00EEA73025699CAE004253F2 /* LaunchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72F25699CAE004253F2 /* LaunchDetailViewModel.swift */; };
+		00EEA73425699D8A004253F2 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA73325699D8A004253F2 /* LaunchDetailViewController.swift */; };
+		00EEA73925699E43004253F2 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA73825699E43004253F2 /* LaunchDetailBuilder.swift */; };
 		00F441D0256929A700A641A5 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CD256929A700A641A5 /* Launch.swift */; };
 		00F441D1256929A700A641A5 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CE256929A700A641A5 /* Rocket.swift */; };
 		00F441D2256929A700A641A5 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CF256929A700A641A5 /* Link.swift */; };
@@ -54,6 +58,10 @@
 		00A4968C2569203A00940166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00A4968F2569203A00940166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00A496912569203A00940166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00EEA72525699BAA004253F2 /* LaunchDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewModelType.swift; sourceTree = "<group>"; };
+		00EEA72F25699CAE004253F2 /* LaunchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewModel.swift; sourceTree = "<group>"; };
+		00EEA73325699D8A004253F2 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
+		00EEA73825699E43004253F2 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
 		00F441CD256929A700A641A5 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		00F441CE256929A700A641A5 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		00F441CF256929A700A641A5 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
@@ -136,6 +144,17 @@
 			path = SpaceX;
 			sourceTree = "<group>";
 		};
+		00EEA72325699B1B004253F2 /* LaunchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00EEA72525699BAA004253F2 /* LaunchDetailViewModelType.swift */,
+				00EEA72F25699CAE004253F2 /* LaunchDetailViewModel.swift */,
+				00EEA73325699D8A004253F2 /* LaunchDetailViewController.swift */,
+				00EEA73825699E43004253F2 /* LaunchDetailBuilder.swift */,
+			);
+			path = LaunchDetail;
+			sourceTree = "<group>";
+		};
 		00F441C02569290200A641A5 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +178,7 @@
 		00F441C22569290E00A641A5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				00EEA72325699B1B004253F2 /* LaunchDetail */,
 				00F4423425693E1900A641A5 /* LaunchList */,
 			);
 			path = Screens;
@@ -441,14 +461,18 @@
 			files = (
 				00F4423A25693F2700A641A5 /* LaunchPresentation.swift in Sources */,
 				00A496842569203800940166 /* AppDelegate.swift in Sources */,
+				00EEA72625699BAA004253F2 /* LaunchDetailViewModelType.swift in Sources */,
 				00F442872569867F00A641A5 /* LaunchListBuilder.swift in Sources */,
 				00F441DA25692A7D00A641A5 /* Decoders.swift in Sources */,
+				00EEA73025699CAE004253F2 /* LaunchDetailViewModel.swift in Sources */,
 				00F4427525696C6000A641A5 /* LaunchListCellViewModelType.swift in Sources */,
 				00F441D0256929A700A641A5 /* Launch.swift in Sources */,
+				00EEA73925699E43004253F2 /* LaunchDetailBuilder.swift in Sources */,
 				00F441D2256929A700A641A5 /* Link.swift in Sources */,
 				00F4427B25696CBF00A641A5 /* LaunchListCellViewModel.swift in Sources */,
 				00F4422F25693DD600A641A5 /* AppContainer.swift in Sources */,
 				00F4423625693E3700A641A5 /* LaunchListViewModelType.swift in Sources */,
+				00EEA73425699D8A004253F2 /* LaunchDetailViewController.swift in Sources */,
 				00F441E825692D1000A641A5 /* Constants.swift in Sources */,
 				00F4426D256967F300A641A5 /* LaunchListViewController.swift in Sources */,
 				00F441D625692A3900A641A5 /* Result.swift in Sources */,

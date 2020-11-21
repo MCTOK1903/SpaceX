@@ -33,6 +33,11 @@ enum LaunchListViewModelOutput: Equatable {
     case showLaunchList([LaunchPresentation])
 }
 
+enum LaunchListRoute {
+    case detail(LaunchDetailViewModelType)
+}
+
 protocol LaunchListViewModelDelegate: class {
     func handleViewModelOutput(_ output: LaunchListViewModelOutput)
+    func navigate(to route: LaunchListRoute)
 }

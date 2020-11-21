@@ -116,6 +116,14 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
             launchListCollection.reloadData()
         }
     }
+    
+    func navigate(to route: LaunchListRoute) {
+        switch route {
+        case .detail(let viewModel):
+            let viewController = LaunchDetailBuilder.make(with: viewModel)
+            show(viewController, sender: nil)
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -138,7 +146,7 @@ extension LaunchListViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension LaunchListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //Todo
+        viewModel.selectLaunch(at: indexPath.item)
     }
 }
 
