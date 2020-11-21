@@ -16,8 +16,8 @@ final class LaunchDetailViewModel: LaunchDetailViewModelType {
     
     // MARK: init
     
-    init(launch: Launch) {
-        self.presentation = LaunchPresentation(launch: launch)
+    init(launch: LaunchPresentation) {
+        self.presentation = launch
     }
     
     // MARK: Funcs

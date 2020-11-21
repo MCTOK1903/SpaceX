@@ -45,8 +45,8 @@ final class LaunchListViewModel: LaunchListViewModelType {
         }
     }
     
-    func selectLaunch(at index: Int) {
-        let launch = launches[index]
+    func selectLaunch(with launchPresantation: LaunchPresentation) {
+        let launch = launchPresantation
         let viewModel = LaunchDetailViewModel(launch: launch)
         delegate?.navigate(to: .detail(viewModel))
     }

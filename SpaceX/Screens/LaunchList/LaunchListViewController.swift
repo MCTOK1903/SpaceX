@@ -73,7 +73,7 @@ class LaunchListViewController: UIViewController {
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let sortDesc = UIAlertAction(title: "Sort By Descending", style: .default, handler: { [weak self] _  in
+        let sortDesc = UIAlertAction(title: "Sort By Year Descending", style: .default, handler: { [weak self] _  in
             guard let self = self else { return }
             
             let sorted = self.launchList.sorted { (first, second) -> Bool in
@@ -83,7 +83,7 @@ class LaunchListViewController: UIViewController {
             self.launchListCollection.reloadData()
         })
         
-        let sortAsc =  UIAlertAction(title: "Sort By Ascending", style: .default, handler: { [weak self] _  in
+        let sortAsc =  UIAlertAction(title: "Sort By Year Ascending", style: .default, handler: { [weak self] _  in
             guard let self = self else { return }
             
             let sorted = self.launchList.sorted { (first, second) -> Bool in
@@ -146,7 +146,7 @@ extension LaunchListViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension LaunchListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectLaunch(at: indexPath.item)
+        viewModel.selectLaunch(with: sortedLaunchList[indexPath.item])
     }
 }
 

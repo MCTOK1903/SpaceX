@@ -10,19 +10,19 @@ import Foundation
 protocol LaunchListViewModelType {
     var delegate: LaunchListViewModelDelegate? { get set }
     func load()
-    func selectLaunch(at index: Int)
+    func selectLaunch(with launchPresantation: LaunchPresentation)
 }
 
 enum LaunchListViewModelOutput: Equatable {
     
     static func == (lhs: LaunchListViewModelOutput, rhs: LaunchListViewModelOutput) -> Bool {
         switch (lhs, rhs) {
-        case (.updateTitle(let a), .updateTitle(let b)):
-            return a == b
-        case (.setLoading(let a), .setLoading(let b)):
-            return a == b
-        case (.showLaunchList(let a), .showLaunchList(let b)):
-            return a == b
+        case (.updateTitle(_), .updateTitle(_)):
+            return true
+        case (.setLoading(_), .setLoading(_)):
+            return true
+        case (.showLaunchList(_), .showLaunchList(_)):
+            return true
         default:
             return false
         }
