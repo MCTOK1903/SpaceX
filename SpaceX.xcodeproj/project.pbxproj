@@ -15,6 +15,9 @@
 		00F441D0256929A700A641A5 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CD256929A700A641A5 /* Launch.swift */; };
 		00F441D1256929A700A641A5 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CE256929A700A641A5 /* Rocket.swift */; };
 		00F441D2256929A700A641A5 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441CF256929A700A641A5 /* Link.swift */; };
+		00F441D625692A3900A641A5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441D525692A3900A641A5 /* Result.swift */; };
+		00F441DA25692A7D00A641A5 /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441D925692A7D00A641A5 /* Decoders.swift */; };
+		00F441DE25692B6F00A641A5 /* LaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441DD25692B6F00A641A5 /* LaunchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		00F441CD256929A700A641A5 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		00F441CE256929A700A641A5 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		00F441CF256929A700A641A5 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		00F441D525692A3900A641A5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		00F441D925692A7D00A641A5 /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
+		00F441DD25692B6F00A641A5 /* LaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		00F441C12569290800A641A5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00F441D825692A6600A641A5 /* Helpers */,
+				00F441DD25692B6F00A641A5 /* LaunchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -111,6 +119,15 @@
 				00A4968E2569203A00940166 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		00F441D825692A6600A641A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00F441D525692A3900A641A5 /* Result.swift */,
+				00F441D925692A7D00A641A5 /* Decoders.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,10 +201,13 @@
 			files = (
 				00A496882569203800940166 /* ViewController.swift in Sources */,
 				00A496842569203800940166 /* AppDelegate.swift in Sources */,
+				00F441DA25692A7D00A641A5 /* Decoders.swift in Sources */,
 				00F441D0256929A700A641A5 /* Launch.swift in Sources */,
 				00F441D2256929A700A641A5 /* Link.swift in Sources */,
+				00F441D625692A3900A641A5 /* Result.swift in Sources */,
 				00F441D1256929A700A641A5 /* Rocket.swift in Sources */,
 				00A496862569203800940166 /* SceneDelegate.swift in Sources */,
+				00F441DE25692B6F00A641A5 /* LaunchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
