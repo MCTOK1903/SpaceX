@@ -11,11 +11,13 @@ public struct LaunchPresentation: Equatable {
     let missionName: String
     let launchYear: String
     let rocketName: String
-    let imageLink: String
+    let smallImageLink: String
+    let bigImageLink: String
+    let detail: String?
 }
 
 extension LaunchPresentation {
     init(launch: Launch) {
-        self.init(missionName: launch.missionName, launchYear: launch.launchYear, rocketName: launch.rocket.rocketName, imageLink: launch.links.missionImageSmall)
+        self.init(missionName: launch.missionName, launchYear: launch.launchYear, rocketName: launch.rocket.rocketName, smallImageLink: launch.links.missionImageSmall, bigImageLink: launch.links.missionImage, detail: launch.details)
     }
 }

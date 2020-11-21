@@ -26,7 +26,7 @@ class LaunchListCellViewModel: LaunchListCellViewModelType  {
     }
     
     var imageLink: URL {
-        return URL(string: launch.imageLink)!
+        return URL(string: launch.smallImageLink)!
     }
     
     // MARK: init

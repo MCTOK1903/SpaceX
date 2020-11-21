@@ -48,8 +48,6 @@ class LaunchListViewController: UIViewController {
         
         viewModel.load()
         
-
-        
         setUpUI()
     }
     
