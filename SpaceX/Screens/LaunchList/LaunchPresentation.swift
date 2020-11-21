@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LaunchPresentation {
+public struct LaunchPresentation: Equatable {
     let missionName: String
     let launchYear: String
     let rocketName: String

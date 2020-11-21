@@ -20,11 +20,15 @@
 		00F441E825692D1000A641A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441E725692D1000A641A5 /* Constants.swift */; };
 		00F441EB25692D2E00A641A5 /* NetworkContant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F441EA25692D2E00A641A5 /* NetworkContant.swift */; };
 		00F4421E256939D200A641A5 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4421D256939D200A641A5 /* SpaceXTests.swift */; };
-		00F4422925693A0000A641A5 /* Launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F4422825693A0000A641A5 /* Launch.json */; };
+		00F4422925693A0000A641A5 /* launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F4422825693A0000A641A5 /* launch.json */; };
 		00F4422F25693DD600A641A5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4422E25693DD600A641A5 /* AppContainer.swift */; };
 		00F4423625693E3700A641A5 /* LaunchListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */; };
 		00F4423A25693F2700A641A5 /* LaunchPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423925693F2700A641A5 /* LaunchPresentation.swift */; };
 		00F4423E2569405800A641A5 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4423D2569405800A641A5 /* LaunchListViewModel.swift */; };
+		00F4424825694C0F00A641A5 /* LaunchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4424725694C0F00A641A5 /* LaunchViewModelTests.swift */; };
+		00F4424D25694C9500A641A5 /* MockLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4424C25694C9500A641A5 /* MockLaunchService.swift */; };
+		00F4425325694E6400A641A5 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4425225694E6400A641A5 /* MockView.swift */; };
+		00F4425F2569533600A641A5 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4425E2569533600A641A5 /* ResourceLoader.swift */; };
 		BBBD93B585857EF3AF10345D /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +60,15 @@
 		00F4421B256939D200A641A5 /* SpaceXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F4421D256939D200A641A5 /* SpaceXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXTests.swift; sourceTree = "<group>"; };
 		00F4421F256939D200A641A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00F4422825693A0000A641A5 /* Launch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Launch.json; sourceTree = "<group>"; };
+		00F4422825693A0000A641A5 /* launch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = launch.json; sourceTree = "<group>"; };
 		00F4422E25693DD600A641A5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		00F4423525693E3700A641A5 /* LaunchListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModelType.swift; sourceTree = "<group>"; };
 		00F4423925693F2700A641A5 /* LaunchPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresentation.swift; sourceTree = "<group>"; };
 		00F4423D2569405800A641A5 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
+		00F4424725694C0F00A641A5 /* LaunchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModelTests.swift; sourceTree = "<group>"; };
+		00F4424C25694C9500A641A5 /* MockLaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchService.swift; sourceTree = "<group>"; };
+		00F4425225694E6400A641A5 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
+		00F4425E2569533600A641A5 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
 		2A1EE4CDB23D29268BDC4C54 /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
 		5E0A4E0EB5825FB07BB39018 /* Pods-SpaceX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.release.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.release.xcconfig"; sourceTree = "<group>"; };
 		8DCF3BAF3D419A64A10F40D9 /* Pods_SpaceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,9 +202,12 @@
 		00F4421C256939D200A641A5 /* SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
+				00F4425D256952FC00A641A5 /* LaunchViewModelTest */,
+				00F4425C256952EC00A641A5 /* ServiceTests */,
+				00F4424B25694C7800A641A5 /* Mocks */,
 				00F44227256939E800A641A5 /* Resources */,
-				00F4421D256939D200A641A5 /* SpaceXTests.swift */,
 				00F4421F256939D200A641A5 /* Info.plist */,
+				00F4425E2569533600A641A5 /* ResourceLoader.swift */,
 			);
 			path = SpaceXTests;
 			sourceTree = "<group>";
@@ -204,7 +215,7 @@
 		00F44227256939E800A641A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				00F4422825693A0000A641A5 /* Launch.json */,
+				00F4422825693A0000A641A5 /* launch.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +228,31 @@
 				00F4423D2569405800A641A5 /* LaunchListViewModel.swift */,
 			);
 			path = LaunchList;
+			sourceTree = "<group>";
+		};
+		00F4424B25694C7800A641A5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				00F4424C25694C9500A641A5 /* MockLaunchService.swift */,
+				00F4425225694E6400A641A5 /* MockView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		00F4425C256952EC00A641A5 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				00F4421D256939D200A641A5 /* SpaceXTests.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		00F4425D256952FC00A641A5 /* LaunchViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				00F4424725694C0F00A641A5 /* LaunchViewModelTests.swift */,
+			);
+			path = LaunchViewModelTest;
 			sourceTree = "<group>";
 		};
 		2032296F41B2A59613058D3D /* Frameworks */ = {
@@ -327,7 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F4422925693A0000A641A5 /* Launch.json in Resources */,
+				00F4422925693A0000A641A5 /* launch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +438,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F4421E256939D200A641A5 /* SpaceXTests.swift in Sources */,
+				00F4424825694C0F00A641A5 /* LaunchViewModelTests.swift in Sources */,
+				00F4425F2569533600A641A5 /* ResourceLoader.swift in Sources */,
+				00F4425325694E6400A641A5 /* MockView.swift in Sources */,
+				00F4424D25694C9500A641A5 /* MockLaunchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
