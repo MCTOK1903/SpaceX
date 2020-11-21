@@ -7,5 +7,5 @@
 
 import Foundation
 
-//Base Class
+///Base Class
 class Constant {}

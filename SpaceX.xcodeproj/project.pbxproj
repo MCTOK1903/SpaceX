@@ -155,6 +155,14 @@
 			path = LaunchDetail;
 			sourceTree = "<group>";
 		};
+		00EEA73E2569D456004253F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00F4425E2569533600A641A5 /* ResourceLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		00F441C02569290200A641A5 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,12 +240,12 @@
 		00F4421C256939D200A641A5 /* SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
-				00F4425E2569533600A641A5 /* ResourceLoader.swift */,
 				00F4421F256939D200A641A5 /* Info.plist */,
-				00F4425C256952EC00A641A5 /* ServiceTests */,
+				00EEA73E2569D456004253F2 /* Helpers */,
 				00F4425D256952FC00A641A5 /* LaunchViewModelTest */,
 				00F4424B25694C7800A641A5 /* Mocks */,
 				00F44227256939E800A641A5 /* Resources */,
+				00F4425C256952EC00A641A5 /* ServiceTests */,
 			);
 			path = SpaceXTests;
 			sourceTree = "<group>";

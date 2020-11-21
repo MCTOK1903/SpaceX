@@ -30,6 +30,7 @@ class LaunchListCellViewModel: LaunchListCellViewModelType  {
     }
     
     // MARK: init
+    
     init(launch: LaunchPresentation) {
         self.launch = launch
     }

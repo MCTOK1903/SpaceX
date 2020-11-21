@@ -106,7 +106,6 @@ class LaunchListCollectionViewCell: UICollectionViewCell {
             launchImage.topAnchor.constraint(equalTo: horizontalStack.topAnchor),
             launchImage.leadingAnchor.constraint(equalTo: horizontalStack.leadingAnchor),
             launchImage.bottomAnchor.constraint(equalTo: horizontalStack.bottomAnchor),
-//            launchImage.widthAnchor.constraint(equalToConstant: contentView.frame.width / 2),
             
             verticalStack.topAnchor.constraint(equalTo: horizontalStack.topAnchor),
             verticalStack.trailingAnchor.constraint(equalTo: horizontalStack.trailingAnchor, constant: 16),

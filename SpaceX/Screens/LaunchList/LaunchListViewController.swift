@@ -101,6 +101,7 @@ class LaunchListViewController: UIViewController {
     }
 }
 
+// MARK: - LaunchListViewModelDelegate
 extension LaunchListViewController: LaunchListViewModelDelegate {
     func handleViewModelOutput(_ output: LaunchListViewModelOutput) {
         switch output {
