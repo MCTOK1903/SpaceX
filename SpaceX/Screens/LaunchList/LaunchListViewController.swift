@@ -36,6 +36,12 @@ class LaunchListViewController: UIViewController {
         return cv
     }()
     
+    private let spinner: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView(style: .large)
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        return ai
+    }()
+    
     // MARK: LifeCycle
     
     override func viewDidLoad() {
@@ -45,6 +51,7 @@ class LaunchListViewController: UIViewController {
         launchListCollection.dataSource = self
         
         view.addSubview(launchListCollection)
+        view.addSubview(spinner)
         
         viewModel.load()
         
@@ -58,6 +65,10 @@ class LaunchListViewController: UIViewController {
         view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
+            
+            spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
             launchListCollection.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             launchListCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             launchListCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -102,13 +113,14 @@ class LaunchListViewController: UIViewController {
 }
 
 // MARK: - LaunchListViewModelDelegate
+
 extension LaunchListViewController: LaunchListViewModelDelegate {
     func handleViewModelOutput(_ output: LaunchListViewModelOutput) {
         switch output {
         case .updateTitle(let title):
             self.title = title
         case .setLoading(let isLoading):
-            UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+            isLoading ? spinner.startAnimating() : spinner.stopAnimating()
         case .showLaunchList(let launchList):
             self.launchList = launchList
             sortedLaunchList = self.launchList
@@ -126,6 +138,7 @@ extension LaunchListViewController: LaunchListViewModelDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension LaunchListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sortedLaunchList.count
@@ -143,6 +156,7 @@ extension LaunchListViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension LaunchListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectLaunch(with: sortedLaunchList[indexPath.item])
@@ -150,6 +164,7 @@ extension LaunchListViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
+
 extension LaunchListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let colums: CGFloat = 1

@@ -19,7 +19,7 @@ public struct LaunchPresentation: Equatable {
 extension LaunchPresentation {
     init(launch: Launch) {
         self.init(missionName: launch.missionName, launchYear: launch.launchYear,
-                  rocketName: launch.rocket.rocketName, smallImageLink: launch.links.missionImageSmall,
-                  bigImageLink: launch.links.missionImage, detail: launch.details)
+                  rocketName: launch.rocket.rocketName, smallImageLink: launch.links.missionImageSmall ?? "",
+                  bigImageLink: launch.links.missionImage ?? "", detail: launch.details)
     }
 }

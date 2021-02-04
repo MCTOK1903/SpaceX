@@ -12,7 +12,7 @@ class LaunchDetailViewController: UIViewController {
     
     // MARK: Properties
     
-    var viewModel: LaunchDetailViewModelType!
+    var viewModel: LaunchDetailViewModelType?
 
     // MARK: View
     
@@ -90,8 +90,8 @@ class LaunchDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.delegate = self
-        viewModel.load()
+        viewModel?.delegate = self
+        viewModel?.load()
         
         view.addSubview(scrollView)
         scrollView.addSubview(launchImage)

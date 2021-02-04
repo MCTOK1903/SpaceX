@@ -11,7 +11,7 @@ final class LaunchListViewModel: LaunchListViewModelType {
     
     // MARK: Properties
     
-    var delegate: LaunchListViewModelDelegate?
+    weak var delegate: LaunchListViewModelDelegate?
     private let service: LaunchServiceProtocol
     private var launches: [Launch] = []
     
